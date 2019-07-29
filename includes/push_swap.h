@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/29 15:16:32 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/07/29 15:21:53 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ void				remove_element(t_lst **head, t_lst *element);
 void				remove_first_element(t_lst *head);
 void				remove_last_element(t_lst *head);
 
-void				create_action(t_stack *stacks, int move);
+void				create_actions(t_stack *stacks, int move);
 void				add_list(t_stack *stacks, int moves);
 void				delete_move(t_stack *stacks, t_actions *move);
 int					optimizer(t_stack *stacks, t_actions *moes);
