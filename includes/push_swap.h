@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/29 11:23:41 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/07/29 14:31:54 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,6 @@
 # include <stdlib.h>
 
 # define ABS(X) (X < 0) ? -X : X
-
-# define RRR 0
-# define RRA 1
-# define RRB 2
-# define RR 3
-# define RA 4
-# define RB 5
-# define SS 6
-# define SA 7
-# define SB 8
-# define PA 9
-# define PB 10
 
 # define VISUALIZER (1 << 0)
 # define USAGE  (1 << 1)
@@ -133,20 +121,5 @@ int					optimizer(t_frame *stacks, t_moves *moves);
 void				parser(char **av, t_frame *stacks);
 int					options(char *s, t_frame *stacks);
 int					check_duplicate(t_clist *head);
-
-void				sa(t_frame *stacks);
-void				sb(t_frame *stacks);
-void				ss(t_frame *stacks);
-
-void				pb(t_frame *stacks);
-void				pa(t_frame *stacks);
-
-void				ra(t_frame *stacks);
-void				rb(t_frame *stacks);
-void				rr(t_frame *stacks);
-
-void				rra(t_frame *stacks);
-void				rrb(t_frame *stacks);
-void				rrr(t_frame *stacks);
 
 #endif
