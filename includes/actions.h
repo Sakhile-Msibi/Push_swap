@@ -6,12 +6,24 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 14:20:55 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/29 14:29:17 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/07/29 14:59:31 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ACTIONS_H
 # define ACTIONS_H
+
+# define RRR 0
+# define RRA 1
+# define RRB 2
+# define RR 3
+# define RA 4
+# define RB 5
+# define SS 6
+# define SA 7
+# define SB 8
+# define PA 9
+# define PB 10
 
 void	swap_a(t_frame *stacks);
 void	swap_b(t_frame *stacks);
