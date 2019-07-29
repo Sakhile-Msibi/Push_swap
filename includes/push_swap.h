@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/29 14:51:10 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/07/29 15:16:32 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,13 @@ typedef struct		s_actions
 	int					move : 8;
 	struct s_actions	*next;
 	struct s_actions	*prev;
-}					t_actionss;
+}					t_actions;
 
 typedef struct		s_stack
 {
 	t_lst			*a;
 	t_lst			*b;
-	t_moves			*moves;
+	t_actions		*moves;
 	short			flags;
 	short			p;
 }					t_stack;
@@ -113,10 +113,10 @@ void				remove_element(t_lst **head, t_lst *element);
 void				remove_first_element(t_lst *head);
 void				remove_last_element(t_lst *head);
 
-void				create_moves(t_stack *stacks, int move);
+void				create_action(t_stack *stacks, int move);
 void				add_list(t_stack *stacks, int moves);
-void				delete_move(t_stack *stacks, t_moves *move);
-int					optimizer(t_stack *stacks, t_moves *moes);
+void				delete_move(t_stack *stacks, t_actions *move);
+int					optimizer(t_stack *stacks, t_actions *moes);
 
 void				parser(char **av, t_stack *stacks);
 int					options(char *s, t_stack *stacks);

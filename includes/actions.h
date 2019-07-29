@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 14:20:55 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/29 14:59:31 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/07/29 15:14:36 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@
 # define PA 9
 # define PB 10
 
-void	swap_a(t_frame *stacks);
-void	swap_b(t_frame *stacks);
-void	swap_ab(t_frame *stacks);
-void	push_b(t_frame *stacks);
-void	push_a(t_frame *stacks);
-void	rotate_a(t_frame *stacks);
-void	rotate_b(t_frame *stacks);
-void	rotate_ab(t_frame *stacks);
-void	reverse_rot_a(t_frame *stacks);
-void	reverse_rot_b(t_frame *stacks);
-void	reverse_rot_ab(t_frame *stacks);
+void	swap_a(t_stack *stacks);
+void	swap_b(t_stack *stacks);
+void	swap_ab(t_stack *stacks);
+void	push_b(t_stack *stacks);
+void	push_a(t_stack *stacks);
+void	rotate_a(t_stack *stacks);
+void	rotate_b(t_stack *stacks);
+void	rotate_ab(t_stack *stacks);
+void	reverse_rot_a(t_stack *stacks);
+void	reverse_rot_b(t_stack *stacks);
+void	reverse_rot_ab(t_stack *stacks);
 
 #endif
