@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/29 14:31:54 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/07/29 14:45:57 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,28 +27,28 @@
 # define HIDE   (1 << 4)
 # define SLOW   (1 << 5)
 
-typedef struct		s_clist
+typedef struct		s_lst
 {
 	int				data;
-	struct s_clist	*next;
-	struct s_clist	*prev;
-}					t_clist;
+	struct s_lst	*next;
+	struct s_lst	*prev;
+}					t_lst;
 
-typedef struct		s_moves
+typedef struct		s_actions
 {
-	int				move : 8;
-	struct s_moves	*next;
-	struct s_moves	*prev;
-}					t_moves;
+	int					move : 8;
+	struct s_actions	*next;
+	struct s_actions	*prev;
+}					t_actionss;
 
-typedef struct		s_frame
+typedef struct		s_stack
 {
-	t_clist			*a;
-	t_clist			*b;
+	t_lst			*a;
+	t_lst			*b;
 	t_moves			*moves;
 	short			flags;
 	short			p;
-}					t_frame;
+}					t_stack;
 
 typedef struct		s_line
 {
@@ -69,57 +69,57 @@ typedef struct		s_rotate
 	int				flag;
 }					t_rotate;
 
-t_clist				*normalize(t_frame *stacks, t_clist *new, int i, int j);
-t_clist				*create_clist(int data, t_frame *stacks);
-void				add_before(t_clist *element, int data, t_frame *stacks);
-void				add_after(t_clist *element, int data, t_frame *stacks);
-void				add_to_top(t_clist **head, int data, t_frame *stacks);
-void				add_to_tail(t_clist *head, int data, t_frame *stacks);
-void				remove_head(t_clist **head);
-void				print_stacks(t_frame *stacks);
-void				get_input(t_frame *stacks);
-int					is_sorted(t_frame *stacks);
-void				jt(uint8_t jump_index, t_frame *stacks);
-int					count_list(t_clist *stack);
+t_lst				*normalize(t_stack *stacks, t_lst *new, int i, int j);
+t_lst				*create_clist(int data, t_stack *stacks);
+void				add_before(t_lst *element, int data, t_stack *stacks);
+void				add_after(t_lst *element, int data, t_stack *stacks);
+void				add_to_top(t_lst **head, int data, t_stack *stacks);
+void				add_to_tail(t_lst *head, int data, t_stack *stacks);
+void				remove_head(t_lst **head);
+void				print_stacks(t_stack *stacks);
+void				get_input(t_stack *stacks);
+int					is_sorted(t_stack *stacks);
+void				jt(uint8_t jump_index, t_stack *stacks);
+int					count_lst(t_lst *stack);
 
-int					get_median(t_clist *stack, int len);
-int					get_max(t_clist *stack);
-int					get_min(t_clist *stack);
-int					get_dist(t_clist *stack, int nb);
-int					count_list(t_clist *stack);
+int					get_median(t_lst *stack, int len);
+int					get_max(t_lst *stack);
+int					get_min(t_lst *stack);
+int					get_dist(t_lst *stack, int nb);
+int					count_lst(t_lst *stack);
 void				sort_array(int *arr, int end);
-t_rotate			*parse_info(t_clist *stack);
+t_rotate			*parse_info(t_lst *stack);
 
-void				push_biggest(t_frame *stacks, t_rotate *info);
-void				push_smallest(t_frame *stacks, t_rotate *info);
-void				smart_rotate(t_frame *stacks);
-void				sort_back_a(t_frame *stacks, int len);
-int					sort_back(t_frame *stacks, int len);
+void				push_biggest(t_stack *stacks, t_rotate *info);
+void				push_smallest(t_stack *stacks, t_rotate *info);
+void				smart_rotate(t_stack *stacks);
+void				sort_back_a(t_stack *stacks, int len);
+int					sort_back(t_stack *stacks, int len);
 
 char				*get_color(int m);
-void				init_vis(t_frame *stacks, char *s, int i);
+void				init_vis(t_stack *stacks, char *s, int i);
 
-int					right_order(t_clist *stack);
-int					solver(t_frame *stacks);
-void				five(t_frame *stacks);
-void				split_a(t_frame *stacks, int len, int i, int flag);
-void				quicksort(t_frame *stacks, int len);
+int					right_order(t_lst *stack);
+int					solver(t_stack *stacks);
+void				five(t_stack *stacks);
+void				split_a(t_stack *stacks, int len, int i, int flag);
+void				quicksort(t_stack *stacks, int len);
 
-void				error_exit(t_frame *stacks);
-void				exit_push_swap(t_frame *stacks);
-void				free_stacks(t_frame *stacks);
-void				remove_element(t_clist **head, t_clist *element);
-void				remove_element(t_clist **head, t_clist *element);
-void				remove_first_element(t_clist *head);
-void				remove_last_element(t_clist *head);
+void				error_exit(t_stack *stacks);
+void				exit_push_swap(t_stack *stacks);
+void				free_stacks(t_stack *stacks);
+void				remove_element(t_lst **head, t_lst *element);
+void				remove_element(t_lst **head, t_lst *element);
+void				remove_first_element(t_lst *head);
+void				remove_last_element(t_lst *head);
 
-void				create_moves(t_frame *stacks, int move);
-void				add_list(t_frame *stacks, int moves);
-void				delete_move(t_frame *stacks, t_moves *move);
-int					optimizer(t_frame *stacks, t_moves *moves);
+void				create_moves(t_stack *stacks, int move);
+void				add_list(t_stack *stacks, int moves);
+void				delete_move(t_stack *stacks, t_moves *move);
+int					optimizer(t_stack *stacks, t_moves *moes);
 
-void				parser(char **av, t_frame *stacks);
-int					options(char *s, t_frame *stacks);
-int					check_duplicate(t_clist *head);
+void				parser(char **av, t_stack *stacks);
+int					options(char *s, t_stack *stacks);
+int					check_duplicate(t_lst *head);
 
 #endif
