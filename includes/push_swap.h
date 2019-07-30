@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/29 15:28:19 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/07/30 08:58:03 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void				add_to_top(t_lst **head, int data, t_stack *stacks);
 void				add_to_tail(t_lst *head, int data, t_stack *stacks);
 void				remove_head(t_lst **head);
 void				print_stacks(t_stack *stacks);
-void				get_input(t_stack *stacks);
+void				input(t_stack *stacks);
 int					is_sorted(t_stack *stacks);
 void				jt(uint8_t jump_index, t_stack *stacks);
 int					count_lst(t_lst *stack);
@@ -118,8 +118,8 @@ void				add_list(t_stack *stacks, int moves);
 void				delete_action(t_stack *stacks, t_actions *move);
 int					optimizer(t_stack *stacks, t_actions *moes);
 
-void				parser(char **av, t_stack *stacks);
+void				parser(char **argv, t_stack *stacks);
 int					options(char *s, t_stack *stacks);
-int					check_duplicate(t_lst *head);
+int					check_dup(t_lst *head);
 
 #endif
