@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 07:43:31 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/30 08:08:04 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/07/30 08:41:41 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 int			check_dup(t_lst *head)
 {
-	t_lst	*tmp1;
-	t_lst	*tmp2;
+	t_lst	*temp1;
+	t_lst	*temp2;
 
-	tmp1 = head;
-	while (tmp1 != NULL && tmp1->next != head)
+	temp1 = head;
+	while (temp1 != NULL && temp1->next != head)
 	{
-		tmp2 = tmp1->next;
-		while (tmp2 != NULL && tmp2 != head)
+		temp2 = temp1->next;
+		while (temp2 != NULL && temp2 != head)
 		{
-			if (tmp2->data == tmp1->data)
+			if (temp2->data == temp1->data)
 			{
 				return (1);
 			}
-			tmp2 = tmp2->next;
+			temp2 = temp2->next;
 		}
-		tmp1 = tmp1->next;
+		temp1 = temp1->next;
 	}
 	return (0);
 }
@@ -86,7 +86,7 @@ static int	check_numlen(const char *str, t_stack *stacks)
 
 void		fill_stack(const char *str, t_stack *stacks)
 {
-	long	tmp;
+	long	temp;
 	int		i;
 	int		j;
 
@@ -98,13 +98,13 @@ void		fill_stack(const char *str, t_stack *stacks)
 		j = check_numlen(str + i, stacks);
 		if (str[i] == '\0')
 			break ;
-		tmp = ft_atoi_l(str + i);
-		if (tmp > 2147483647 || tmp < -2147483648)
+		temp = ft_atoi_l(str + i);
+		if (temp > 2147483647 || temp < -2147483648)
 			error_exit(stacks);
 		if (!stacks->a)
-			stacks->a = create_clist(tmp, stacks);
+			stacks->a = create_clist(temp, stacks);
 		else
-			add_to_tail(stacks->a, tmp, stacks);
+			add_to_tail(stacks->a, temp, stacks);
 		i += j;
 	}
 }
