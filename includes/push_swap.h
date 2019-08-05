@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/05 13:41:01 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/05 16:22:41 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,25 @@ typedef struct		s_rotate
 	int				flag;
 }					t_rotate;
 
+/*
+**	quicksort1.c
+*/
+
 t_lst				*normalize(t_stack *stacks, t_lst *new, int i, int j);
-t_lst				*create_clist(int data, t_stack *stacks);
-void				add_before(t_lst *element, int data, t_stack *stacks);
-void				add_after(t_lst *element, int data, t_stack *stacks);
+int					count_list(t_lst *stack);
+void				sort_array(int *arr, int end);
+int					get_median(t_lst *stack, int len);
+
+/*
+**	create_lst.c
+*/
+
+t_lst				*create_lst(int data, t_stack *stacks);
 void				add_to_top(t_lst **head, int data, t_stack *stacks);
 void				add_to_tail(t_lst *head, int data, t_stack *stacks);
+
+void				add_before(t_lst *element, int data, t_stack *stacks);
+void				add_after(t_lst *element, int data, t_stack *stacks);
 
 /*
 **	remove_lst.c
@@ -99,14 +112,11 @@ int					is_sorted(t_stack *stacks);
 int					right_order(t_lst *stack);
 
 void				jt(uint8_t jump_index, t_stack *stacks);
-int					count_lst(t_lst *stack);
 
-int					get_median(t_lst *stack, int len);
 int					get_max(t_lst *stack);
 int					get_min(t_lst *stack);
 int					get_dist(t_lst *stack, int nb);
 int					count_lst(t_lst *stack);
-void				sort_array(int *arr, int end);
 t_rotate			*parse_info(t_lst *stack);
 
 void				push_biggest(t_stack *stacks, t_rotate *info);
@@ -123,9 +133,14 @@ char				*get_color(int m);
 
 void				init_vis(t_stack *stacks, char *s, int i);
 
-int					solver(t_stack *stacks);
-void				five(t_stack *stacks);
+/*
+** quicksort2.c
+*/
+
 void				split_a(t_stack *stacks, int len, int i, int flag);
+int					solver(t_stack *stacks);
+
+void				five(t_stack *stacks);
 void				quicksort(t_stack *stacks, int len);
 
 /*
