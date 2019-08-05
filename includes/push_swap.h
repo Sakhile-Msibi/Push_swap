@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/30 08:58:03 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/05 13:41:01 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,29 @@ void				add_before(t_lst *element, int data, t_stack *stacks);
 void				add_after(t_lst *element, int data, t_stack *stacks);
 void				add_to_top(t_lst **head, int data, t_stack *stacks);
 void				add_to_tail(t_lst *head, int data, t_stack *stacks);
+
+/*
+**	remove_lst.c
+*/
+
 void				remove_head(t_lst **head);
+void				remove_element(t_lst **head, t_lst *element);
+
 void				print_stacks(t_stack *stacks);
+
+/*
+**	input_functions.c
+*/
+
 void				input(t_stack *stacks);
+
+/*
+**	is_sorted.c
+*/
+
 int					is_sorted(t_stack *stacks);
+int					right_order(t_lst *stack);
+
 void				jt(uint8_t jump_index, t_stack *stacks);
 int					count_lst(t_lst *stack);
 
@@ -97,29 +116,45 @@ void				sort_back_a(t_stack *stacks, int len);
 int					sort_back(t_stack *stacks, int len);
 
 char				*get_color(int m);
+
+/*
+**	visual_functions.c
+*/
+
 void				init_vis(t_stack *stacks, char *s, int i);
 
-int					right_order(t_lst *stack);
 int					solver(t_stack *stacks);
 void				five(t_stack *stacks);
 void				split_a(t_stack *stacks, int len, int i, int flag);
 void				quicksort(t_stack *stacks, int len);
 
+/*
+**	error_management.c
+*/
+
 void				error_exit(t_stack *stacks);
 void				exit_push_swap(t_stack *stacks);
 void				free_stacks(t_stack *stacks);
-void				remove_element(t_lst **head, t_lst *element);
-void				remove_element(t_lst **head, t_lst *element);
+
 void				remove_first_element(t_lst *head);
 void				remove_last_element(t_lst *head);
+
+/*
+**	list_opp.c
+*/
 
 void				create_actions(t_stack *stacks, int move);
 void				add_list(t_stack *stacks, int moves);
 void				delete_action(t_stack *stacks, t_actions *move);
+
 int					optimizer(t_stack *stacks, t_actions *moes);
 
+/*
+**	parser.c
+*/
+
 void				parser(char **argv, t_stack *stacks);
-int					options(char *s, t_stack *stacks);
+int					flag_options(char *s, t_stack *stacks);
 int					check_dup(t_lst *head);
 
 #endif
