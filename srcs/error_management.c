@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 08:24:53 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/30 08:38:47 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/05 13:04:49 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ static void	free_actions(t_stack *stacks)
 		while (stacks->moves != stacks->moves->next)
 		{
 			temp = stacks->moves->next;
-			delete_move(stacks, stacks->moves);
+			delete_action(stacks, stacks->moves);
 			stacks->moves = temp;
 		}
-		delete_move(stacks, stacks->moves);
+		delete_action(stacks, stacks->moves);
 	}
 	stacks->moves = NULL;
 }
