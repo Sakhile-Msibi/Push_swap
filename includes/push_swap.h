@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/05 16:22:41 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/05 16:34:27 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,10 @@ void				input(t_stack *stacks);
 
 int					is_sorted(t_stack *stacks);
 int					right_order(t_lst *stack);
+
+/*
+**	jump_table.c
+*/
 
 void				jt(uint8_t jump_index, t_stack *stacks);
 
