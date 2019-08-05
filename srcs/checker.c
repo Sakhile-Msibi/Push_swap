@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 12:54:36 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/30 08:07:36 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/05 13:39:49 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int			main(int argc, char **argv)
 	}
 	if (!(stacks->a))
 		exit_push_swap(stacks);
-	get_input(stacks);
+	input(stacks);
 	if (stacks->flags & VISUALIZER)
 		init_vis(stacks, "\033[31;5;mEND\033[0m", 0);
 	ft_printf((is_sorted(stacks) == 1) ? "OK\n" : "KO\n");
