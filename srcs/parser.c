@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 07:43:31 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/30 08:41:41 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/05 12:48:45 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ void		parser(char **argv, t_stack *stacks)
 	i = 1;
 	while (argv[i])
 	{
-		if (options(argv[i], stacks))
+		if (flag_options(argv[i], stacks))
 			i++;
 		else
 		{
