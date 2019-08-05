@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 15:15:20 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/05 15:15:25 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/05 16:11:36 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ t_lst		*normalize(t_stack *stacks, t_lst *new, int i, int j)
 		while (j < len)
 		{
 			if (unsorted[i] == arr[j] && (!new))
-				new = create_clist(j + 1, stacks);
+				new = create_lst(j + 1, stacks);
 			else if (unsorted[i] == arr[j])
 				add_to_top(&new, j + 1, stacks);
 			j++;
