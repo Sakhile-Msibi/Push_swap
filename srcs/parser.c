@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 07:43:31 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/05 12:48:45 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/06 10:25:24 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ void		fill_stack(const char *str, t_stack *stacks)
 		if (temp > 2147483647 || temp < -2147483648)
 			error_exit(stacks);
 		if (!stacks->a)
-			stacks->a = create_clist(temp, stacks);
+			stacks->a = create_lst(temp, stacks);
 		else
 			add_to_tail(stacks->a, temp, stacks);
 		i += j;
