@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/05 16:42:25 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/06 07:47:14 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ typedef struct		s_rotate
 */
 
 t_lst				*normalize(t_stack *stacks, t_lst *new, int i, int j);
-int					count_list(t_lst *stack);
+int					count_lst(t_lst *stack);
 void				sort_array(int *arr, int end);
 int					get_median(t_lst *stack, int len);
 
@@ -120,7 +120,6 @@ void				jt(uint8_t jump_index, t_stack *stacks);
 int					get_max(t_lst *stack);
 int					get_min(t_lst *stack);
 int					get_dist(t_lst *stack, int nb);
-int					count_lst(t_lst *stack);
 t_rotate			*parse_info(t_lst *stack);
 
 void				push_biggest(t_stack *stacks, t_rotate *info);
@@ -129,7 +128,11 @@ void				smart_rotate(t_stack *stacks);
 void				sort_back_a(t_stack *stacks, int len);
 int					sort_back(t_stack *stacks, int len);
 
-char				*get_color(int m);
+/*
+**	get_colour.c
+*/
+
+char				*get_colour(int m);
 
 /*
 **	visual_functions.c
@@ -166,7 +169,11 @@ void				create_actions(t_stack *stacks, int move);
 void				add_list(t_stack *stacks, int moves);
 void				delete_action(t_stack *stacks, t_actions *move);
 
-int					optimizer(t_stack *stacks, t_actions *moes);
+/*
+**	action_optimiser.c
+*/
+
+int					optimiser(t_stack *stacks, t_actions *moes);
 
 /*
 **	parser.c
