@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 09:33:16 by smsibi            #+#    #+#             */
-/*   Updated: 2019/07/30 09:33:49 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/06 10:11:45 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,10 @@ static void		print_vis(t_stack *stacks, char *action, int i)
 	temp = a;
 	temp2 = b;
 	if (stacks->flags & COLORS)
-		ft_printf("\tCurrent move:\t%s%s\n", get_color(i), action);
+		ft_printf("\tCurrent move:\t%s%s\n", get_colour(i), action);
 	else
 		ft_printf("\tCurrent move:\t%s\n", action);
-	ft_printf("%s", get_color(stacks->moves->move));
+	ft_printf("%s", get_colour(stacks->moves->move));
 	ft_printf("\033[0m");
 	while (a || b)
 	{
