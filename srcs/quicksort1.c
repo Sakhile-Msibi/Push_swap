@@ -6,13 +6,13 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 15:15:20 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/05 16:11:36 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/06 07:46:36 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int			count_list(t_lst *stack)
+int			count_lst(t_lst *stack)
 {
 	t_lst	*temp;
 	int		elements;
@@ -57,7 +57,7 @@ static int	*list_to_array(t_lst *stack)
 	int		i;
 	t_lst	*temp;
 
-	if (!stack || !(arr = (int*)malloc(sizeof(*arr) * count_list(stack))))
+	if (!stack || !(arr = (int*)malloc(sizeof(*arr) * count_lst(stack))))
 		return (NULL);
 	temp = stack;
 	i = 0;
@@ -91,7 +91,7 @@ t_lst		*normalize(t_stack *stacks, t_lst *new, int i, int j)
 	int	*unsorted;
 	int	len;
 
-	len = count_list(stacks->a);
+	len = count_lst(stacks->a);
 	if (!(arr = list_to_array(stacks->a)) || \
 			(!(unsorted = list_to_array(stacks->a))))
 		error_exit(stacks);
