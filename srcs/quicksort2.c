@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 15:17:09 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/05 16:01:31 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/06 07:36:49 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int			solver(t_stack *stacks)
 	stacks->moves = NULL;
 	stacks->p = 0;
 	create_moves(stacks, 11);
-	len = count_list(stacks->a);
+	len = count_lst(stacks->a);
 	split_a(stacks, len, 0, 0);
 	temp = stacks->a;
 	if (right_order(stacks->a))
