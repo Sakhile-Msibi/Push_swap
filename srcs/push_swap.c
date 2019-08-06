@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 13:51:08 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/06 09:52:07 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/06 10:08:34 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static void	print_actions_count(t_stack *stacks)
 		temp = temp->next;
 		i++;
 	}
-	ft_printf("--> %d moves for %d numbers.\n", i, count_list(stacks->a));
+	ft_printf("--> %d moves for %d numbers.\n", i, count_lst(stacks->a));
 }
 
 static void	print_usage(void)
@@ -98,7 +98,7 @@ int			main(int argc, char **argv)
 		print_usage();
 	if (!(stacks->a) || stacks->flags & USAGE)
 		exit_push_swap(stacks);
-	(is_sorted(stacks) || count_list(stacks->a) == 3) ?
+	(is_sorted(stacks) || count_lst(stacks->a) == 3) ?
 		special_handler(stacks) : solver(stacks);
 	while (optimiser(stacks, stacks->moves) == 1)
 		argc++;
