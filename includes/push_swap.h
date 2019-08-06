@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/06 07:47:14 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/06 08:33:34 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,11 @@ t_rotate			*parse_info(t_lst *stack);
 
 void				push_biggest(t_stack *stacks, t_rotate *info);
 void				push_smallest(t_stack *stacks, t_rotate *info);
+
+/*
+**	quicksort3.c
+*/
+
 void				smart_rotate(t_stack *stacks);
 void				sort_back_a(t_stack *stacks, int len);
 int					sort_back(t_stack *stacks, int len);
