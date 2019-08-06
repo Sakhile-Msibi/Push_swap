@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 13:31:06 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/05 13:37:32 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/06 07:39:10 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		right_order(t_lst *stack)
 
 	if (!stack)
 		return (0);
-	if (count_list(stack) < 2)
+	if (count_lst(stack) < 2)
 		return (1);
 	num = get_min(stack);
 	temp = stack->next;
