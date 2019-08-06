@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 15:17:09 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/06 07:36:49 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/06 08:23:28 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int			greater_median(t_stack *stacks, int median, int flag)
 
 int			finish(t_stack *stacks)
 {
-	(stacks->a->data > stacks->a->next->data) ? sa(stacks) : 0;
+	(stacks->a->data > stacks->a->next->data) ? swap_a(stacks) : 0;
 	while ((stacks->b))
 		smart_rotate(stacks);
 	return (1);
@@ -87,7 +87,7 @@ int			solver(t_stack *stacks)
 	stacks->b = NULL;
 	stacks->moves = NULL;
 	stacks->p = 0;
-	create_moves(stacks, 11);
+	create_actions(stacks, 11);
 	len = count_lst(stacks->a);
 	split_a(stacks, len, 0, 0);
 	temp = stacks->a;
