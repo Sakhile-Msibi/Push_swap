@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 13:51:08 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/05 14:42:05 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/06 09:52:07 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	print_actions(t_stack *stacks)
 	{
 		act = stacks->moves->move;
 		if (stacks->flags & COLORS)
-			ft_printf("%s%s\033[0m\n", get_color(act), m[act]);
+			ft_printf("%s%s\033[0m\n", get_colour(act), m[act]);
 		else
 			ft_printf("%s\n", m[act]);
 		stacks->moves = stacks->moves->next;
@@ -89,7 +89,7 @@ int			main(int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
-	if (!(stacks = (t_stack*)malloc(sizeof(*stacks))))
+	if (!(stacks = (t_stack *)malloc(sizeof(*stacks))))
 		return (0);
 	stacks->b = NULL;
 	stacks->moves = NULL;
@@ -100,7 +100,7 @@ int			main(int argc, char **argv)
 		exit_push_swap(stacks);
 	(is_sorted(stacks) || count_list(stacks->a) == 3) ?
 		special_handler(stacks) : solver(stacks);
-	while (optimizer(stacks, stacks->moves) == 1)
+	while (optimiser(stacks, stacks->moves) == 1)
 		argc++;
 	(stacks->flags & MOVES) ?
 		print_actions_count(stacks) : print_actions(stacks);
