@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 13:51:08 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/16 11:01:19 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 15:38:23 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int			main(int argc, char **argv)
 		return (0);
 	stacks->b = NULL;
 	stacks->moves = NULL;
-	intput_parser(argv, stacks);
+	input_parser(argv, stacks);
 	if (stacks->a && (stacks->flags & USAGE))
 		print_usage();
 	if (!(stacks->a) || stacks->flags & USAGE)
