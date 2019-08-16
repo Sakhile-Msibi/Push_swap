@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 12:54:36 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/05 13:42:28 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 10:58:32 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int			main(int argc, char **argv)
 		return (0);
 	stacks->b = NULL;
 	create_actions(stacks, 11);
-	parser(argv, stacks);
+	intput_parser(argv, stacks);
 	if (stacks->a && (stacks->flags & USAGE))
 	{
 		print_usage();
