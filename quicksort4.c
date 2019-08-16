@@ -6,11 +6,11 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 08:41:23 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/06 08:55:08 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 11:04:57 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_shap_.h"
+#include "push_swap.h"
 #include "actions.h"
 
 void	do_rotate(int nb, t_stacks *stacks)
