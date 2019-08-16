@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 16:31:04 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/06 07:32:13 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 10:16:28 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 void	jt(uint8_t jump_index, t_stacks *stacks)
 {
-	static void	(*pf[])(t_stacks *stacks) = {rrr, rra, rrb, rr, ra, rb, ss, \
-		sa, sb, pa, pb};
+	static void	(*pf[])(t_stacks *stacks) =
+	{reverse_rot_ab, reverse_rot_a, reverse_rot_b, rotate_ab, \
+		rotate_a, rotate_b, swap_ab, swap_a, swap_b, push_a, push_b};
 
 	if (jump_index < 12)
 		pf[jump_index](stacks);
