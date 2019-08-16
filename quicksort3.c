@@ -6,14 +6,14 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 08:06:16 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/06 08:20:32 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 11:07:48 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "actions.h"
 
-void	smart_rotate(t_stacks *stacks)
+void	smart_rotate(t_stack *stacks)
 {
 	t_rotate	*info;
 
@@ -30,7 +30,7 @@ void	smart_rotate(t_stacks *stacks)
 	free(info);
 }
 
-void	sort_back_a(t_stacks *stacks, int len)
+void	sort_back_a(t_stack *stacks, int len)
 {
 	int	median;
 	int	i;
@@ -49,7 +49,7 @@ void	sort_back_a(t_stacks *stacks, int len)
 	}
 }
 
-int		sort_back(t_stacks *stacks, int len)
+int		sort_back(t_stack *stacks, int len)
 {
 	int	median;
 	int	i;
