@@ -6,14 +6,14 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 07:53:54 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/06 08:00:09 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 11:06:28 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "actions.h"
 
-void        push_a(t_stacks *stacks)
+void        push_a(t_stack *stacks)
 {
     if (!(stacks->b))
         return ;
@@ -25,7 +25,7 @@ void        push_a(t_stacks *stacks)
     add_list(stacks, PA);
 }
 
-void        push_b(t_stacks *stacks)
+void        push_b(t_stack *stacks)
 {
     if (!(stacks->a))
         return ;
