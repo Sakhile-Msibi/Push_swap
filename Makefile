@@ -18,13 +18,13 @@ LIBPRINTFPATH = libft/ft_printf/
 
 HEADER =
 
-SRCS = checker.c push_swap.c create_lst.c parser.c remove_lst.c \
+SRCS = checker.c push_swap.c create_lst.c input_parser.c remove_lst.c \
 	   actions3.c actions2.c actions4.c actions1.c error_management.c input_functions.c \
 	   jump_table.c is_sorted.c quicksort2.c quicksort1.c list_opp.c \
 	   action_optimisation.c flag_options.c get_colour.c quicksort4.c quicksort5.c \
 	   quicksort3.c visual_functions.c\
 
-OBJS = checker.o push_swap.o create_lst.o parser.o remove_lst.o \
+OBJS = checker.o push_swap.o create_lst.o input_parser.o remove_lst.o \
        actions3.o actions2.o actions4.o actions1.o error_management.o input_functions.o \
        jump_table.o is_sorted.o quicksort2.o quicksort1.o list_opp.o \
        action_optimisation.o flag_options.o get_colour.o quicksort4.o quicksort5.o \
