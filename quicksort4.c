@@ -6,14 +6,14 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 08:41:23 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/16 11:04:57 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 11:10:10 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "actions.h"
 
-void	do_rotate(int nb, t_stacks *stacks)
+void	do_rotate(int nb, t_stack *stacks)
 {
 	while (nb != 0)
 	{
@@ -22,7 +22,7 @@ void	do_rotate(int nb, t_stacks *stacks)
 	}
 }
 
-void	do_rotate_a(int nb, t_stacks *stacks)
+void	do_rotate_a(int nb, t_stack *stacks)
 {
 	while (nb != 0)
 	{
@@ -31,7 +31,7 @@ void	do_rotate_a(int nb, t_stacks *stacks)
 	}
 }
 
-void	go_shortest_b(t_stacks *stacks, int nb)
+void	go_shortest_b(t_stack *stacks, int nb)
 {
 	int	distance;
 
@@ -41,7 +41,7 @@ void	go_shortest_b(t_stacks *stacks, int nb)
 	do_rotate(distance, stacks);
 }
 
-void	push_biggest(t_stacks *stacks, t_rotate *info)
+void	push_biggest(t_stack *stacks, t_rotate *info)
 {
 	if (stacks->p ^ 1 && \
 			(ABS(get_dist(stacks->b, info->max - 1))) < (ABS(info->maxdist)))
@@ -62,7 +62,7 @@ void	push_biggest(t_stacks *stacks, t_rotate *info)
 	}
 }
 
-void	push_smallest(t_stacks *stacks, t_rotate *info)
+void	push_smallest(t_stack *stacks, t_rotate *info)
 {
 	if ((ABS(get_dist(stacks->b, info->min + 1))) < (ABS(info->mindist)))
 	{
