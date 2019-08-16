@@ -6,14 +6,14 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 07:05:50 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/06 07:25:17 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 10:51:09 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "actions.h"
 
-static int	check_ra(t_stacks *stacks)
+static int	check_ra(t_stack *stacks)
 {
 	t_actions	*temp;
 
@@ -33,7 +33,7 @@ static int	check_ra(t_stacks *stacks)
 	return (0);
 }
 
-static int	check_pa(t_stacks *stacks)
+static int	check_pa(t_stack *stacks)
 {
 	t_actions	*temp;
 
@@ -52,7 +52,7 @@ static int	check_pa(t_stacks *stacks)
 	return (0);
 }
 
-static int	check_rra(t_stacks *stacks)
+static int	check_rra(t_stack *stacks)
 {
 	t_actions	*temp;
 
@@ -71,7 +71,7 @@ static int	check_rra(t_stacks *stacks)
 	return (0);
 }
 
-static int	check_rrb(t_stacks *stacks)
+static int	check_rrb(t_stack *stacks)
 {
 	t_actions	*temp;
 
@@ -90,7 +90,7 @@ static int	check_rrb(t_stacks *stacks)
 	return (0);
 }
 
-int			optimiser(t_stacks *stacks, t_actions *moves)
+int			optimiser(t_stack *stacks, t_actions *moves)
 {
 	t_actions	*temp;
 
