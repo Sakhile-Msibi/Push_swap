@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 07:43:31 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/06 10:25:24 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 10:59:16 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void		fill_stack(const char *str, t_stack *stacks)
 	}
 }
 
-void		parser(char **argv, t_stack *stacks)
+void		intput_parser(char **argv, t_stack *stacks)
 {
 	int	i;
 
