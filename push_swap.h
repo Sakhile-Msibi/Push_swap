@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/16 10:57:43 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 15:29:43 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,10 +188,10 @@ void				delete_action(t_stack *stacks, t_actions *move);
 int					optimiser(t_stack *stacks, t_actions *moes);
 
 /*
-**	parser.c
+**	input_parser.c
 */
 
-void				intput_parser(char **argv, t_stack *stacks);
+void				input_parser(char **argv, t_stack *stacks);
 int					check_dup(t_lst *head);
 
 /*
