@@ -6,11 +6,12 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/16 10:03:32 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/16 10:09:19 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 11:09:32 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "actions.h"
 
 void	reverse_rot_a(t_stack *stacks)
 {
