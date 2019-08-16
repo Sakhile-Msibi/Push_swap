@@ -6,16 +6,15 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/06 10:31:19 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/16 10:57:43 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../libft/libft.h"
-# include "get_next_line.h"
-# include "ft_printf.h"
+# include "libft/libft.h"
+# include "libft/ft_printf/ft_printf.h"
 # include <stdlib.h>
 
 # define ABS(X) (X < 0) ? -X : X
@@ -192,7 +191,7 @@ int					optimiser(t_stack *stacks, t_actions *moes);
 **	parser.c
 */
 
-void				parser(char **argv, t_stack *stacks);
+void				intput_parser(char **argv, t_stack *stacks);
 int					check_dup(t_lst *head);
 
 /*
