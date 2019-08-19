@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/19 11:14:20 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/19 11:46:24 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,17 +85,12 @@ t_lst				*create_lst(int data, t_stack *stacks);
 void				add_to_top(t_lst **head, int data, t_stack *stacks);
 void				add_to_tail(t_lst *head, int data, t_stack *stacks);
 
-void				add_before(t_lst *element, int data, t_stack *stacks);
-void				add_after(t_lst *element, int data, t_stack *stacks);
-
 /*
 **	remove_lst.c
 */
 
 void				remove_head(t_lst **head);
 void				remove_element(t_lst **head, t_lst *element);
-
-void				print_stacks(t_stack *stacks);
 
 /*
 **	input_functions.c
@@ -159,9 +154,6 @@ void				init_vis(t_stack *stacks, char *s, int i);
 void				split_a(t_stack *stacks, int len, int i, int flag);
 int					solver(t_stack *stacks);
 
-void				five(t_stack *stacks);
-void				quicksort(t_stack *stacks, int len);
-
 /*
 **	error_management.c
 */
@@ -169,9 +161,6 @@ void				quicksort(t_stack *stacks, int len);
 void				error_exit(t_stack *stacks);
 void				exit_push_swap(t_stack *stacks);
 void				free_stacks(t_stack *stacks);
-
-void				remove_first_element(t_lst *head);
-void				remove_last_element(t_lst *head);
 
 /*
 **	list_opp.c
