@@ -6,7 +6,7 @@
 /*   By: smsibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:06:34 by smsibi            #+#    #+#             */
-/*   Updated: 2019/08/16 15:29:43 by smsibi           ###   ########.fr       */
+/*   Updated: 2019/08/19 11:14:20 by smsibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef struct		s_lst
 
 typedef struct		s_actions
 {
-	int					move : 8;
+	int					move;
 	struct s_actions	*next;
 	struct s_actions	*prev;
 }					t_actions;
