@@ -60,4 +60,4 @@ $ ./push_swap <NUMBERS> | ./checker <NUMBERS>
 ## Concepts learned
 * Makefiles: To make a makefile compile another makefile.
 * Link lists (Double link list).
-* Sorting algorithms (Quick sort algorith).
+* Sorting algorithms (Quick sort algorithm).
